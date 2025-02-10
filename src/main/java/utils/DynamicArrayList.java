@@ -1,7 +1,7 @@
 package utils;
 
 /**
- *
+ * An implementation of a DynamicArray list.
  * @author michelle, Contributed by Cal Woods
  */
 public class DynamicArrayList {
@@ -17,6 +17,7 @@ public class DynamicArrayList {
     }
 
     /**
+     * Gets the number of elements added to a list.
      * @return The number of elements in DynamicArrayList
      */
     public int size() {
@@ -33,5 +34,21 @@ public class DynamicArrayList {
 
         //Otherwise, return false
         return false;
+    }
+
+    /**
+     * Gives a value at a given position within the bounds of instance size.
+     * @param position Given position in DynamicArrayList
+     * @return The value at the given position
+     */
+    public String get(int position) {
+        //Validation - Check for a position less than 0 as it is not a valid position in an array, or a position greater than numElements as anything beyond this is invalid
+        if(position < 0 || position >= this.numElements) {
+            //Throw an Exception telling the user that the given position is not valid
+            throw new IndexOutOfBoundsException("Given position is NOT valid!");
+        }
+
+        //Return array value at given position
+        return this.data[position];
     }
 }
