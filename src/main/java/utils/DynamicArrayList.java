@@ -22,4 +22,16 @@ public class DynamicArrayList {
     public int size() {
         return this.numElements;
     }
+
+    /**
+     * Checks if DynamicArrayList instance has no added elements, is empty.
+     * @return Boolean indicating if instance is empty
+     */
+    public boolean isEmpty() {
+        //Check if numElements is 0, return true
+        if(this.numElements == 0) return true;
+
+        //Otherwise, return false
+        return false;
+    }
 }
