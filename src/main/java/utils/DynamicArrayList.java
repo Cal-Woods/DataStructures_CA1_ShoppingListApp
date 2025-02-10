@@ -16,5 +16,10 @@ public class DynamicArrayList {
         this.numElements = 0;
     }
 
-
+    /**
+     * @return The number of elements in DynamicArrayList
+     */
+    public int size() {
+        return this.numElements;
+    }
 }
