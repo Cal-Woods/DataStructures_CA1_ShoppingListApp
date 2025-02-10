@@ -70,4 +70,21 @@ public class DynamicArrayList {
 
         return -1;
     }
+
+
+    //Methods to be used internally
+
+    /**
+     * Grows the instance String[] by 2 times.
+     * @return A String array containing all previous data within list size that is twice as big as this.data
+     */
+    private String[] grow() {
+        //Declare a String[] temp with same amount of elements as this.numElements * 2
+        String[] temp = new String[this.numElements * 2];
+
+        //Copy data from this.data to temp
+        System.arraycopy(this.data, 0, temp, 0, this.numElements);
+
+        return temp;
+    }
 }
