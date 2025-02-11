@@ -19,6 +19,20 @@ public class DynamicArrayList {
         this.numElements = 0;
     }
 
+    /**
+     * Initialises DynamicArrayList with values from a given String[]
+     * @param array Given String[] array
+     */
+    public DynamicArrayList(String[] array) {
+        //Initialise this.data String[] attribute to merge(this.data, array)
+        this.data = new String[10];
+        //Set this.numElements to 0
+        this.numElements = 0;
+
+        //Call 'addAll()' method to add all elements in given array
+        addAll(array);
+    }
+
     //public 
 
     /**
@@ -92,7 +106,11 @@ public class DynamicArrayList {
         return true;
     }
 
-
+    /**
+     * Adds all values in given array to DynamicArrayList instance.
+     * @param array Given String[] array to add to instance
+     * @return Boolean indicating f values were added
+     */
     public boolean addAll(String[] array) {
         //Validation
         if(array == null) throw new IllegalArgumentException("Given String[] array must NOT be null!");
@@ -103,7 +121,7 @@ public class DynamicArrayList {
         //Set this.data to merged
         this.data = merged;
 
-        //Increment this.numElements by array.length to reflect array value being added to this.data
+        //Increment this.numElements by array.length to reflect array values being added to this.data
         this.numElements += array.length;
         
         return true;
