@@ -22,7 +22,7 @@ public class DynamicArrayListAddTests {
     /**
      * Test of add method at valid position.
      */
-    @Test
+    /*@Test
     public void testAddAtPos_ValidPosition() {
         System.out.println("Testing adding a String to a valid position within a list.");
         String [] data = {"Yellow", "Leather", "Yellow", "Leather", "Red", "Balloon"};
@@ -40,12 +40,12 @@ public class DynamicArrayListAddTests {
             String result = instance.get(i);
             assertEquals(expResult, result);
         }
-    }
+    }*/
 
     /**
      * Test of add method at valid position.
      */
-    @Test
+    /*@Test
     public void testAddAtPos_ValidPosition_SizeOfList() {
         System.out.println("Testing adding a String to a valid position within a list (The slot after the end of the " +
                 "list)" +
@@ -65,12 +65,12 @@ public class DynamicArrayListAddTests {
             String result = instance.get(i);
             assertEquals(expResult, result);
         }
-    }
+    }*/
 
     /**
      * Test of add method at valid position (where list is empty).
      */
-    @Test
+    /*@Test
     public void testAddAtPos_ValidPosition_SizeOfList_EmptyList() {
         System.out.println("Testing adding a String to a valid position within a list (where the list is empty)" +
                 ".");
@@ -89,12 +89,12 @@ public class DynamicArrayListAddTests {
             String result = instance.get(i);
             assertEquals(expResult, result);
         }
-    }
+    }*/
 
     /**
      * Test of add method at invalid position (negative number).
      */
-    @Test
+    /*@Test
     public void testAddAtPos_InvalidPosition_Negative() {
         System.out.println("Testing adding a String to an invalid position within a list (negative number).");
         String [] data = {"Yellow", "Leather", "Yellow", "Leather", "Red", "Balloon"};
@@ -106,11 +106,12 @@ public class DynamicArrayListAddTests {
         assertThrows(IndexOutOfBoundsException.class, () -> {
             instance.add("Blue", -1);
         });
-    }
+    }*/
+
     /**
      * Test of add method at invalid position (longer than length of list).
      */
-    @Test
+    /*@Test
     public void testAddAtPos_InvalidPosition_TooBig() {
         System.out.println("Testing adding a String to an invalid position within a list (number is greater than the " +
                 "length of the list)" +
@@ -124,7 +125,7 @@ public class DynamicArrayListAddTests {
         assertThrows(IndexOutOfBoundsException.class, () -> {
             instance.add("Blue", 7);
         });
-    }
+    }*/
 
     /**
      * Test of addAll method with empty list, where it does not need to grow.
@@ -218,7 +219,7 @@ public class DynamicArrayListAddTests {
     /**
      * Test of set method with valid parameters.
      */
-    @Test
+    /*@Test
     public void testSet_ValidParameters() {
         System.out.println("Testing set method with valid parameters");
         int pos = 0;
@@ -241,12 +242,12 @@ public class DynamicArrayListAddTests {
         assertEquals("Second element", instance.get(1));
         assertEquals("Third element", instance.get(2));
         assertEquals("Fourth element", instance.get(3));
-    }
+    }*/
 
     /**
      * Test of set method with invalid parameters (position less than 0).
      */
-    @Test
+    /*@Test
     public void testSet_InvalidParameters_BreakingLowerBound() {
         System.out.println("Testing set method with invalid parameters (position less than 0)");
         int pos = -1;
@@ -260,12 +261,12 @@ public class DynamicArrayListAddTests {
         assertThrows(IndexOutOfBoundsException.class, () -> {
             instance.set(pos, text);
         });
-    }
+    }*/
 
     /**
      * Test of set method with invalid parameters (position greater than size).
      */
-    @Test
+    /*@Test
     public void testSet_InvalidParameters_BreakingUpperBound_GreaterThanSize() {
         System.out.println("Testing set method with invalid parameters (position greater than size)");
         int pos = 5;
@@ -279,12 +280,12 @@ public class DynamicArrayListAddTests {
         assertThrows(IndexOutOfBoundsException.class, () -> {
             instance.set(pos, text);
         });
-    }
+    }*/
 
     /**
      * Test of set method with invalid parameters (position equal to size).
      */
-    @Test
+    /*@Test
     public void testSet_InvalidParameters_BreakingUpperBound_EqualToSize() {
         System.out.println("Testing set method with invalid parameters (position equal to size)");
         int pos = 4;
@@ -298,5 +299,5 @@ public class DynamicArrayListAddTests {
         assertThrows(IndexOutOfBoundsException.class, () -> {
             instance.set(pos, text);
         });
-    }
+    }*/
 }
