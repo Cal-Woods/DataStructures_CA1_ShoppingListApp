@@ -71,7 +71,21 @@ public class DynamicArrayList {
         return -1;
     }
 
+    public boolean add(String value) {
+        //Validation - We are allowing null values so no check for that
+        //Check for blank String value
+        if(value.isBlank()) return false;
 
+        //Check if this.numElements = String[] data.length
+        if(this.numElements == this.data.length) {
+            //Call 'grow()' method as this.data is full
+            this.data = grow();
+        }
+        //add at numElements & increase numElements '++'
+        this.data[this.numElements++] = value;
+
+        return true;
+    }
     //Methods to be used internally
 
     /**
