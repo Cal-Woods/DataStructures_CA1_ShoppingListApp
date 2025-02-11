@@ -11,10 +11,15 @@ public class DynamicArrayList {
 
     //Constructors
     //Default no-argument constructor
+    /**
+     * Initialises DynamicArrayList with no extra arguments
+     */
     public DynamicArrayList() {
         this.data = new String[10];
         this.numElements = 0;
     }
+
+    //public 
 
     /**
      * Gets the number of elements added to a list.
@@ -75,7 +80,7 @@ public class DynamicArrayList {
         //Validation - We are allowing null values so no check for that
         //Check for blank String value
         if(value.isBlank()) return false;
-
+        
         //Check if this.numElements = String[] data.length
         if(this.numElements == this.data.length) {
             //Call 'grow()' method as this.data is full
@@ -86,6 +91,24 @@ public class DynamicArrayList {
 
         return true;
     }
+
+
+    public boolean addAll(String[] array) {
+        //Validation
+        if(array == null) throw new IllegalArgumentException("Given String[] array must NOT be null!");
+
+        //Call 'merge()' method for merging two given arrays, store merged
+        String[] merged = merge(this.data, array);
+
+        //Set this.data to merged
+        this.data = merged;
+
+        //Increment this.numElements by array.length to reflect array value being added to this.data
+        this.numElements += array.length;
+        
+        return true;
+    }
+
     //Methods to be used internally
 
     /**
@@ -99,6 +122,24 @@ public class DynamicArrayList {
         //Copy data from this.data to temp
         System.arraycopy(this.data, 0, temp, 0, this.numElements);
 
+        return temp;
+    }
+
+    private String[] merge(String[] arr1, String[] arr2) {
+        //Validation
+        //If arr2 given array is null, only arr2 as arr1 will be the internal whch is never null
+        if(arr2 == null) throw new IllegalArgumentException("Given arrays must NOT be null!");
+        
+        //Declare temp String array of size arr1 + arr2
+        String[] temp = new String[this.numElements + arr2.length];
+
+        //Call 'System.arraycopy()' to copy first array into temp
+        System.arraycopy(arr1, 0, temp, 0, this.numElements);
+
+        //Call 'System.arraycopy()' to copy arr2 into temp
+        System.arraycopy(arr2, 0, temp, this.numElements, arr2.length);
+
+        //Return temp
         return temp;
     }
 }
