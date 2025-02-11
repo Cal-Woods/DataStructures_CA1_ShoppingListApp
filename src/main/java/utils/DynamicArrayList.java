@@ -29,7 +29,7 @@ public class DynamicArrayList {
         //Set this.numElements to 0
         this.numElements = 0;
 
-        //Call 'addAll()' method to add all elements in given array
+        //Call 'addAll()' method to add all elements in given array, will also update this.numElements
         addAll(array);
     }
 
