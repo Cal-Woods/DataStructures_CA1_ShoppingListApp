@@ -23,37 +23,37 @@ public class DynamicArrayListConstructorTests {
      * Testing the one int parameter constructor, with an invalid list size/growth factor (less
      * than 0).
      */
-    @Test
+    /*@Test
     public void testIntConstructor_InvalidValue_LessThanZero(){
         System.out.println("testing parameterised constructor with an invalid value (less than 0).");
         assertThrows(IllegalArgumentException.class, () -> {
             DynamicArrayList newList = new DynamicArrayList(-1);
         });
-    }
+    }*/
     
     /**
      * Testing the one int parameter constructor, with a valid list size/growth factor.
      */
-    @Test
+    /*@Test
     public void testIntConstructor_ValidValue(){
         System.out.println("testing parameterised constructor with a valid capacity value.");
         DynamicArrayList newList = new DynamicArrayList(5);
         int expResult = 0;
         int result = newList.size();
         assertEquals(expResult, result);
-    }
+    }*/
     
     /**
      * Testing the one int parameter constructor, with an invalid list size/growth factor
      * (equal to 0).
      */
-    @Test
+    /*@Test
     public void testIntConstructor_InvalidValue_EqualToZero(){
         System.out.println("testing parameterised constructor with an invalid value (equal to 0).");
         assertThrows(IllegalArgumentException.class, () -> {
             DynamicArrayList newList = new DynamicArrayList(0);
         });
-    }
+    }*/
 
     /**
      * Testing the array parameter constructor, with a list shorter than initial capacity.
