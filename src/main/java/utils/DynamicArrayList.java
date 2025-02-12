@@ -33,8 +33,6 @@ public class DynamicArrayList {
         addAll(array);
     }
 
-    //public 
-
     /**
      * Gets the number of elements added to a list.
      * @return The number of elements in DynamicArrayList
@@ -126,6 +124,19 @@ public class DynamicArrayList {
         
         return true;
     }
+
+    /*public boolean removeAll(String occurrences) {
+        //Validation
+        if(occurrences == null) throw new IllegalArgumentException("Given String occurrences must NOT be null!");
+        if(occurrences.isBlank()) return false;
+
+        //Initialise for loop to iterate over DynamicArrayList instance
+        for (int i = 0; i < this.numElements; i++) {
+
+        }
+
+        return true;
+    }*/
 
     //Methods to be used internally
 
