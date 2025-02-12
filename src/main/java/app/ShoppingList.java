@@ -31,9 +31,6 @@ public class ShoppingList {
         sc.nextLine();
 
         //TODO: Initialise while loop to show menu
-
-
-
     }
 
     /**
