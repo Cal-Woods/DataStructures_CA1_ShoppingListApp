@@ -125,18 +125,26 @@ public class DynamicArrayList {
         return true;
     }
 
-    /*public boolean removeAll(String occurrences) {
+    public boolean removeAll(String occurrences) {
         //Validation
         if(occurrences == null) throw new IllegalArgumentException("Given String occurrences must NOT be null!");
         if(occurrences.isBlank()) return false;
 
+        //Delare booleanfound
+        boolean found = false;
+
         //Initialise for loop to iterate over DynamicArrayList instance
         for (int i = 0; i < this.numElements; i++) {
-
+            //check if i is occurrences
+            if(this.data[i] == occurrences) {
+                //Set this.get(i) to null
+                this.data[i] = null;
+                found = true;
+            }
         }
 
-        return true;
-    }*/
+        return found;
+    }
 
     //Methods to be used internally
 
