@@ -125,6 +125,11 @@ public class DynamicArrayList {
         return true;
     }
 
+    /**
+     * Removes all occurrences of a given String
+     * @param occurrences Given String
+     * @return Boolean indicating success
+     */
     public boolean removeAll(String occurrences) {
         //Validation
         if(occurrences == null) throw new IllegalArgumentException("Given String occurrences must NOT be null!");
@@ -144,6 +149,23 @@ public class DynamicArrayList {
         }
 
         return found;
+    }
+
+    /**
+     * Creates a returned copy of this DynamicArrayList.
+     * @return temp new DynamicArrayList
+     */
+    public DynamicArrayList clone() {
+        //Declare DynamicArrayList new to store a copy of this instance
+        String[] newList = new String[this.numElements];
+
+        //Call 'System.arraycopy()' to copy values from this instance to new
+        System.arraycopy(this.data, 0, newList, 0, numElements);
+
+        //Declare DynamicArrayList temp initialised to newList
+        DynamicArrayList temp = new DynamicArrayList(newList);
+
+        return temp;
     }
 
     //Methods to be used internally
