@@ -48,6 +48,13 @@ public class ShoppingList {
         printDynamicArrayList(dynamicList);
 
         //TODO: Initialise while loop to show menu
+        boolean menuLoop = true;
+
+        
+        while(menuLoop) {
+            //Print menu options 'menu()'
+            menu();
+        }
     }
 
     /**
