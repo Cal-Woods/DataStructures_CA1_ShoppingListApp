@@ -25,16 +25,33 @@ public class ShoppingList {
 
         //print ask how many entries the user would like to make into dynamicList
         System.out.print("How many items would you like to add to the list? ");
-        sc.nextInt();
+        int times = sc.nextInt();
 
         //Clear sc buffer
         sc.nextLine();
+        
+        //Print message
+        System.out.println("\nYou will now be repeatedly prompted the number of times you specified. On each request, type the name of an item to add to the list, all will be displayed at the end.");
+
+        //Initialise for loop to iterate chosen number of times
+        for (int i = 0; i < times; i++) {
+            System.out.print("\nPlease type an item to add to shopping list: ");
+        
+            //Declare String to store response
+            String response = sc.nextLine();
+
+            //call 'add()' method to add response to dynamicList
+            dynamicList.add(response);
+        }
+
+        //Display 'dynamicList'
+        printDynamicArrayList(dynamicList);
 
         //TODO: Initialise while loop to show menu
     }
 
     /**
-     * Prints all valid elements in a given DynamicArrayList
+     * Prints all elements in a given DynamicArrayList
      * @param list Given DynamicArrayList
      * @return void Nothing
      * 
@@ -42,7 +59,7 @@ public class ShoppingList {
     private static void printDynamicArrayList(DynamicArrayList list) {
         //Print dynamicList using for loop
         for(int i = 0; i < list.size(); i++){
-            System.out.println(list);
+            System.out.println(list.get(i));
         }
     }
 }
