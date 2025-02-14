@@ -51,7 +51,15 @@ public class ShoppingList {
         
         while(menuLoop) {
             //Print menu options 'menu()'
-            //ssmenu();
+            menu();
+
+            System.out.print("Choose a number to select it's corresponding option: ");
+
+            String option = sc.next();
+    
+            if(option.equals("0")) {
+                menuLoop = false;
+            }
         }
     }
 
@@ -66,5 +74,14 @@ public class ShoppingList {
         for(int i = 0; i < list.size(); i++){
             System.out.println(list.get(i));
         }
+    }
+    /**
+     * Displays menu options until 0 is pressed
+     * @param sc A Scanner object to use
+     * @param loopCondition A boolean that controls loop
+     */
+    public static void menu() {
+        System.out.println("0) Exit\n1) Add to DynamicArrayList\n2)Remove from DynamicArrayList\n3)Remove all occurrences of a value from DynamicArrayList\n");
+
     }
 }
