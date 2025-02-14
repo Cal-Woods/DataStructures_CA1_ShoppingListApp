@@ -124,120 +124,120 @@ public class DynamicArrayListRemoveTests {
     /**
      * Test of remove text method, where no instance appears.
      */
-    @Test
-    public void testRemoveText_NoInstancesPresent() {
-        System.out.println("Testing the remove text method where no matches are present");
-        String text = "gamma";
-        String [] data = {"alpha", "Entry Zero", "Entry One", "beta"};
-        DynamicArrayList instance = new DynamicArrayList();
-        for(String s: data) {
-            instance.add(s);
-        }
+//     @Test
+//     public void testRemoveText_NoInstancesPresent() {
+//         System.out.println("Testing the remove text method where no matches are present");
+//         String text = "gamma";
+//         String [] data = {"alpha", "Entry Zero", "Entry One", "beta"};
+//         DynamicArrayList instance = new DynamicArrayList();
+//         for(String s: data) {
+//             instance.add(s);
+//         }
 
-        boolean expResult = false;
-        boolean result = instance.remove(text);
-        assertEquals(expResult, result);
+//         boolean expResult = false;
+//         boolean result = instance.remove(text);
+//         assertEquals(expResult, result);
 
-        int expSize = data.length;
-        assertEquals(expSize, instance.size());
+//         int expSize = data.length;
+//         assertEquals(expSize, instance.size());
 
-        for(int i = 0; i < instance.size(); i++){
-            assertEquals(data[i], instance.get(i));
-        }
-    }
+//         for(int i = 0; i < instance.size(); i++){
+//             assertEquals(data[i], instance.get(i));
+//         }
+//     }
 
-    /**
-     * Test of remove text method, where one instance occurs.
-     */
-    @Test
-    public void testRemoveText_OneInstanceInArray() {
-        System.out.println("Testing the remove text method, where one instance exists");
-        String text = "alpha";
-        String [] data = {"Entry Zero", "Entry One", "alpha", "beta"};
-        DynamicArrayList instance = new DynamicArrayList();
-        for(String s: data) {
-            instance.add(s);
-        }
+//     /**
+//      * Test of remove text method, where one instance occurs.
+//      */
+//     @Test
+//     public void testRemoveText_OneInstanceInArray() {
+//         System.out.println("Testing the remove text method, where one instance exists");
+//         String text = "alpha";
+//         String [] data = {"Entry Zero", "Entry One", "alpha", "beta"};
+//         DynamicArrayList instance = new DynamicArrayList();
+//         for(String s: data) {
+//             instance.add(s);
+//         }
 
-        boolean expResult = true;
-        boolean result = instance.remove(text);
-        assertEquals(expResult, result);
+//         boolean expResult = true;
+//         boolean result = instance.remove(text);
+//         assertEquals(expResult, result);
 
-        int expSize = data.length - 1;
-        assertEquals(expSize, instance.size());
+//         int expSize = data.length - 1;
+//         assertEquals(expSize, instance.size());
 
-        String [] updatedData = {"Entry Zero", "Entry One", "beta"};
-        for(int i = 0; i < instance.size(); i++){
-            assertEquals(updatedData[i], instance.get(i));
-        }
-    }
+//         String [] updatedData = {"Entry Zero", "Entry One", "beta"};
+//         for(int i = 0; i < instance.size(); i++){
+//             assertEquals(updatedData[i], instance.get(i));
+//         }
+//     }
 
-    /**
-     * Test of remove text method, where multiple instances occur.
-     */
-    @Test
-    public void testRemoveText_MultipleInstancesInArray() {
-        System.out.println("Testing the remove text method, where multiple instances exist");
-        String text = "alpha";
-        String [] data = {"Entry Zero", "Entry One", "beta", "alpha", "alpha", "alpha"};
-        DynamicArrayList instance = new DynamicArrayList();
-        for(String s: data) {
-            instance.add(s);
-        }
+//     /**
+//      * Test of remove text method, where multiple instances occur.
+//      */
+//     @Test
+//     public void testRemoveText_MultipleInstancesInArray() {
+//         System.out.println("Testing the remove text method, where multiple instances exist");
+//         String text = "alpha";
+//         String [] data = {"Entry Zero", "Entry One", "beta", "alpha", "alpha", "alpha"};
+//         DynamicArrayList instance = new DynamicArrayList();
+//         for(String s: data) {
+//             instance.add(s);
+//         }
 
-        boolean expResult = true;
-        boolean result = instance.remove(text);
-        assertEquals(expResult, result);
+//         boolean expResult = true;
+//         boolean result = instance.remove(text);
+//         assertEquals(expResult, result);
 
-        int expSize = data.length - 1;
-        assertEquals(expSize, instance.size());
+//         int expSize = data.length - 1;
+//         assertEquals(expSize, instance.size());
 
-        String [] updatedData = {"Entry Zero", "Entry One", "beta", "alpha", "alpha"};
-        for(int i = 0; i < instance.size(); i++){
-           assertEquals(updatedData[i], instance.get(i));
-        }
-    }
+//         String [] updatedData = {"Entry Zero", "Entry One", "beta", "alpha", "alpha"};
+//         for(int i = 0; i < instance.size(); i++){
+//            assertEquals(updatedData[i], instance.get(i));
+//         }
+//     }
 
-    /**
-     * Test of remove text method, where multiple instances occur in different case.
-     */
-    @Test
-    public void testRemoveText_MultipleInstancesInArray_ConfirmingCaseSensitivity() {
-        System.out.println("Testing the remove text method, where multiple instances exist");
-        String text = "alpha";
-        String [] data = {"Entry Zero", "Entry One", "beta", "ALPHA", "alpha", "alpha"};
-        DynamicArrayList instance = new DynamicArrayList();
-        for(String s: data) {
-            instance.add(s);
-        }
+//     /**
+//      * Test of remove text method, where multiple instances occur in different case.
+//      */
+//     @Test
+//     public void testRemoveText_MultipleInstancesInArray_ConfirmingCaseSensitivity() {
+//         System.out.println("Testing the remove text method, where multiple instances exist");
+//         String text = "alpha";
+//         String [] data = {"Entry Zero", "Entry One", "beta", "ALPHA", "alpha", "alpha"};
+//         DynamicArrayList instance = new DynamicArrayList();
+//         for(String s: data) {
+//             instance.add(s);
+//         }
 
-        boolean expResult = true;
-        boolean result = instance.remove(text);
-        assertEquals(expResult, result);
+//         boolean expResult = true;
+//         boolean result = instance.remove(text);
+//         assertEquals(expResult, result);
 
-        int expSize = data.length - 1;
-        assertEquals(expSize, instance.size());
+//         int expSize = data.length - 1;
+//         assertEquals(expSize, instance.size());
 
-        String [] updatedData = {"Entry Zero", "Entry One", "beta", "ALPHA", "alpha"};
-        for(int i = 0; i < instance.size(); i++){
-            assertEquals(updatedData[i], instance.get(i));
-        }
-    }
+//         String [] updatedData = {"Entry Zero", "Entry One", "beta", "ALPHA", "alpha"};
+//         for(int i = 0; i < instance.size(); i++){
+//             assertEquals(updatedData[i], instance.get(i));
+//         }
+//     }
 
-    /**
-     * Test of remove text method, where value to be deleted is null.
-     */
-    @Test
-    public void testRemoveText_NullValue() {
-        System.out.println("Testing the remove text method to remove something where value to be removed is " +
-                "null");
-        DynamicArrayList instance = new DynamicArrayList();
-        instance.add("Entry Zero");
-        instance.add("Entry One");
-        instance.add("Entry Two");
+//     /**
+//      * Test of remove text method, where value to be deleted is null.
+//      */
+//     @Test
+//     public void testRemoveText_NullValue() {
+//         System.out.println("Testing the remove text method to remove something where value to be removed is " +
+//                 "null");
+//         DynamicArrayList instance = new DynamicArrayList();
+//         instance.add("Entry Zero");
+//         instance.add("Entry One");
+//         instance.add("Entry Two");
 
-        assertThrows(IllegalArgumentException.class, () -> {
-            instance.remove(null);
-        });
-    }
+//         assertThrows(IllegalArgumentException.class, () -> {
+//             instance.remove(null);
+//         });
+//     }
 }

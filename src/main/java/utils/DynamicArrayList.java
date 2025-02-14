@@ -135,7 +135,7 @@ public class DynamicArrayList {
         if(occurrences == null) throw new IllegalArgumentException("Given String occurrences must NOT be null!");
         if(occurrences.isBlank()) return false;
 
-        //Delare booleanfound
+        //Declare boolean found
         boolean found = false;
 
         //Initialise for loop to iterate over DynamicArrayList instance
@@ -144,6 +144,9 @@ public class DynamicArrayList {
             if(this.data[i] == occurrences) {
                 //Set this.get(i) to null
                 this.data[i] = null;
+                //Decrease numElements by 1
+                this.numElements--;
+
                 found = true;
             }
         }
